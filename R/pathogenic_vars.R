@@ -7,12 +7,13 @@ library(dplyr)
 setwd('~/Projects/DGD_Mendelian_RNASeq/')
 final <- read.delim('data/variant_filtering/final_splicevariants_exons.txt', stringsAsFactors = F)
 
-# gatk
+# gatk4
 gatk4 <- read.delim('data/variant_filtering/gatk4_filtered_variants.maf')
 gatk4 <- gatk4[which(gatk$Tumor_Sample_Barcode %in% final$Sample & gatk4$HGVSc %in% final$HGVSc),]
 gatk4 <- gatk4[,c('Tumor_Sample_Barcode','HGVSc','Variant_Classification')]
 gatk4$caller <- 'GATK4'
 
+# gatk3.8
 gatk <- read.delim('data/variant_filtering/gatk3_filtered_variants.maf')
 gatk <- gatk[which(gatk$Tumor_Sample_Barcode %in% final$Sample & gatk$HGVSc %in% final$HGVSc),]
 gatk <-gatk[,c('Tumor_Sample_Barcode','HGVSc','Variant_Classification')]
