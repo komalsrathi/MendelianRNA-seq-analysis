@@ -1,3 +1,7 @@
+# Author: Komal S. Rathi
+# Date: 04/19/2018
+# Function: Themes for Publication Quality Plots
+
 theme_Publication <- function(base_size=15, base_family="Helvetica") {
   library(grid)
   library(ggthemes)
