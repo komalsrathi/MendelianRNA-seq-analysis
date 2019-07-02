@@ -1,0 +1,7 @@
+.DS_Store
+.Rhistory
+paper/*
+results/*
+reference_papers/*
+data/*
+R/Archive/*
