@@ -2,6 +2,7 @@
 # Date: 06/19/2019
 # Function: 
 # Boxplots for each gene across all patients to show Allele Imbalance using gnomAD allele balance
+# This uses the RData object generated from allelic_imbalance_gatk3.R
 
 library(GenomicRanges)
 library(ggplot2)
