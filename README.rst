@@ -17,5 +17,5 @@ Mendelian RNA-Seq-analysis
 Introduction
 ============
 
-Scripts for post processing/analysis of Mendelian RNA-seq project.
+Contains scripts for post processing/analysis of DGD Mendelian RNA-seq project. 
 
