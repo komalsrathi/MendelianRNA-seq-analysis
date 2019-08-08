@@ -1,6 +1,6 @@
 # Author: Komal S. Rathi
 # Date: 04/15/2019
-# Function: 
+# Function:
 # Mendelian Genes isoform analysis on all mendelian genes (irrespective of expression)
 
 library(dplyr)
