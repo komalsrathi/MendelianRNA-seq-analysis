@@ -1,4 +1,8 @@
-# for paper, lets start with 1706 NMD genes expressed in LCLs
+# Author: Komal S. Rathi
+# Date: 08/08/2019
+# Function:
+# Revise figure 1 with 1706 NMD genes expressed in LCLs
+
 library(dplyr)
 library(xlsx)
 library(VennDiagram)
