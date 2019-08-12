@@ -6,3 +6,4 @@ reference_papers/*
 data/*
 R/Archive/*
 manuscript/*
+R/cleanup_code.R
