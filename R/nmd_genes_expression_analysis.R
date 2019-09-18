@@ -88,6 +88,9 @@ if(file.exists('data/mend_genes_isoform_analysis_input.RData')){
   # save these big inputs
   save(gtex.ebv, gtex.wb, patient, p.expr, ebv.expr, wb.expr, file = 'data/mend_genes_isoform_analysis_input.RData')
 }
+write.table(gtex.ebv, file = 'results/expression/GTEx_EBV_expr_genes.txt', quote = F, sep = "\t", row.names = F)
+write.table(gtex.wb, file = 'results/expression/GTEx_WB_expr_genes.txt', quote = F, sep = "\t", row.names = F)
+
 
 # barplot of Mendelian Neuro genes with FPKM > 1 in EBV vs Whole blood
 for.barplot <- rbind(gtex.ebv, gtex.wb, patient)
