@@ -95,6 +95,8 @@ write.table(gtex.wb, file = 'results/expression/GTEx_WB_expr_genes.txt', quote =
 # barplot of Mendelian Neuro genes with FPKM > 1 in EBV vs Whole blood
 for.barplot <- rbind(gtex.ebv, gtex.wb, patient)
 for.barplot <- for.barplot[which(for.barplot$mend.gene == "Y"),]
+to.write <- dcast(for.barplot, gene_symbol~type, value.var = "FPKM")
+write.table(to.write, file = 'paper/mendelian_disorders_genes/expressed_nmd_genes_overlap.txt', quote = F, sep = "\t", row.names = F)
 for.boxplot <- dcast(for.barplot, gene_symbol~type, value.var = 'FPKM', fill = 0)
 for.boxplot <- melt(for.boxplot, value.name = 'FPKM', variable.name = 'Groups')
 my_comparisons <- list(c("EBV_transformed_lymphocytes", "Whole_Blood"),
